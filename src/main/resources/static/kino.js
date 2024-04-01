@@ -96,7 +96,7 @@ function kjopBillett() {
 }
 function setKinoBilletter() {
     $.get("/billetter", function (billett) {
-        let ut = "<table><tr><th>Film</th><th>Antall</th><th>Fornavn</th><th>Etternavn</th><th>Telefonnr</th><th>Epost</th></tr>";
+        let ut = "<table class='table table-striped'>"+"<tr><th>Film</th><th>Antall</th><th>Fornavn</th><th>Etternavn</th><th>Telefonnr</th><th>Epost</th></tr>";
         for (let personInfo of billett) {
             ut += "<tr>";
             ut += "<td>" + personInfo.film + "</td><td>" + personInfo.antall + "</td><td>" + personInfo.fornavn + "</td><td>" + personInfo.etternavn + "</td><td>" + personInfo.telefonnr + "</td><td>" +
